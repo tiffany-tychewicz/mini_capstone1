@@ -1,3 +1,10 @@
+# Exercise:
+# • In your mini_capstone, create a single route that can display ANY single product using a query parameter.
+
+# • In your mini_capstone, create a single route that can display ANY single product using a url segment parameter.
+
+# (Hint: You can refer to your cheat sheet to find a way to get a specific product…)
+
 class Api::ProductsController < ApplicationController
   def index
     @all_products = Product.all
