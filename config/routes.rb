@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     get "/products" => "products#index"
     get "/products_create" => "products#create"
     get "/products/:id" => "products#show"
-    get "/segments/:name" => "products#segment"
+    get "/products/:name" => "products#show"
   end
 end
