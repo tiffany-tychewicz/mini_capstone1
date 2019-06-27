@@ -1,5 +1,5 @@
 # Exercise:
-# • In your mini_capstone, create a single route that can display ANY single product using a query parameter.
+
 
 # • In your mini_capstone, create a single route that can display ANY single product using a url segment parameter.
 
@@ -24,5 +24,10 @@ class Api::ProductsController < ApplicationController
     product_id = params["id"]
     @product = Product.find_by(id: product_id)
     render "show.json.jb"
+  end
+
+  def segment
+    @message = params["name"]
+    render "segment.json.jb"
   end
 end
