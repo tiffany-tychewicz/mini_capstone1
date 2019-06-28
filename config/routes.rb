@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get "/products" => "products#index"
     get "/products_create" => "products#create"
     get "/products/:id" => "products#show"
-    get "/segments/:name" => "products#segment"
+    patch "/products/:id" => "products#update"
+    delete "/products/:id" => "products#destroy"
   end
 end
