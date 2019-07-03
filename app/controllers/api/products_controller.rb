@@ -66,4 +66,11 @@ class Api::ProductsController < ApplicationController
     render json: {message: "Please press F."}
   end
 
+  def show_supplier
+    supplier_id = params["id"]
+    @supplier = Supplier.find_by(id: supplier_id)
+    render "show_supplier.json.jb"
+  end
+
+
 end
