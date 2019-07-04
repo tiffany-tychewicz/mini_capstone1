@@ -69,7 +69,7 @@ class Api::ProductsController < ApplicationController
   def show_supplier
     supplier_id = params["id"]
     @supplier = Supplier.find_by(id: supplier_id)
-    render "show_supplier.json.jb"
+    render "supplier.json.jb"
   end
 
 
