@@ -28,6 +28,7 @@ class Api::ProductsController < ApplicationController
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"])
+      
 
     if @create_product.save
       render "create.json.jb"
