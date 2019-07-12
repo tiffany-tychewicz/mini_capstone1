@@ -7,11 +7,26 @@ class Api::OrdersController < ApplicationController
 
 
   def create
-    product = Product.find_by(id: params[:product_id])
+    # product = Product.find_by(id: params[:product_id])
+    carted_product = CartedProduct.all(status: "carted")
+    # Use that data to create a new row in the orders table, and save the user_id, subtotal, tax, and total.
+
+    
+
+    @create_carted_order = Order.new(
+      user_id: params["user_id"],
+      subtotal: product.subtotal,
+      tax: product.tax,
+      total: product.total,
+      
+      )
+   
+    # Go to the products table, find the product with an id of params["product_id"], grab the price
+
     calculated_subtotal = product.price * params[:quantity].to_i
     calculated_tax = product.tax * params[:quantity].to_i
     calculated_total = product.total * params[:quantity].to_i
-    # Go to the products table, find the product with an id of params["product_id"], grab the price
+
     @create_order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],
