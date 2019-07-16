@@ -1,0 +1,28 @@
+<h1>Edit Products</h1>
+<% if @products && @products.errors.any? %>
+  <%= @products.errors.full_messages %>
+<% end %>
+<form action="/products/<%= @products.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div>
+    Name: <input type="text" name="input_name" value="<%= @products.name %>">
+  </div>
+  <div>
+    Price: <input type="text" name="input_price" value="<%= @products.price %>">
+  </div>
+  <div>
+    Image URL: <input type="text" name="input_image_url" value="<%= @products.image_url %>">
+  </div>
+  <div>
+    Description:: <input type="text" name="input_description" value="<%= @products.description %>">
+  </div>
+  <div>
+    Choose a user:
+    <select name="user_id">
+      <% @user.each do |user| %>
+        <option value="<%= user.id %>"><%= user.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <input type="submit" value="Update products">
+</form> 
