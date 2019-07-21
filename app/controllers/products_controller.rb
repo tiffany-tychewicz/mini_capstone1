@@ -32,9 +32,9 @@ class ProductsController < ApplicationController
     render "edit.html.erb"
   end
 
-  d  def update
+  def update
     @products = Product.find_by(id: params[:id])
-    @products.name = params[:input_name
+    @products.name = params[:input_name]
     @products.price = params[:input_price]
     @products.image_url = params[:input_image_url]
     @products.description = params[:input_description]
