@@ -1,5 +1,31 @@
 {
   "name": "mini_capstone1",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.24.0",
+    "tone": "^13.4.9"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carahtychewicz/mini_capstone1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carahtychewicz/mini_capstone1/issues"
+  },
+  "homepage": "https://github.com/carahtychewicz/mini_capstone1#readme",
+  "devDependencies": {
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6"
+  }
 }

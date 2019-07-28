@@ -6,7 +6,7 @@ class Product < ApplicationRecord
   #   Supplier.find_by(id: self.supplier_id)
   # end
   
-  belongs_to :supplier
+  # belongs_to :supplier
   has_many :orders
   has_many :category_products
   has_many :categories, through: :category_products
@@ -29,5 +29,13 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+
+  # def image_url
+  #   if images.length > 0
+  #     images[0].url
+  #   else
+  #     "https://www.hutchinsontires.com/helpers/img/no_image.jpg"
+  #   end
+  # end
 
 end
