@@ -6,7 +6,7 @@
 #   description: @product.description
 # }
 
-render partial: "product.json.jb", locals: { product: @product, image_url: product.image_url }
+render partial: "product.json.jb", locals: { product: @product }
 
 
 
